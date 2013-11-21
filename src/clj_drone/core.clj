@@ -3,7 +3,7 @@
   (:require [clj-drone.at :refer :all]
             [clj-drone.navdata :refer :all]
             [clj-drone.goals :refer :all]
-            [taoensso.timbre :as log]))
+            [clojure.tools.logging :as log]))
 
 
 (def default-drone-ip "192.168.1.1")
