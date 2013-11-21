@@ -1,4 +1,4 @@
-(defproject ar-drone "0.1.8a"
+(defproject ar-drone "0.1.9a"
   :description "Clojure Control for the AR Drone"
   :url "https://github.com/gigasquid/clj-drone"
   :license {:name "Eclipse Public License"
