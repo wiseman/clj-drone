@@ -1,7 +1,6 @@
 (ns clj-drone.core
   (:import (java.net DatagramPacket DatagramSocket InetAddress))
-  (:require [clojure.stacktrace :refer :all]
-            [clj-drone.at :refer :all]
+  (:require [clj-drone.at :refer :all]
             [clj-drone.navdata :refer :all]
             [clj-drone.goals :refer :all]
             [taoensso.timbre :as log]))
@@ -117,7 +116,6 @@
   (fn [ag ex]
     (do
       (println "evil error occured: " ex " and we still have value " @ag)
-      (print-stack-trace ex)
       (let [navdata-socket (:navdata-socket (name @drones))
             nav-agent (:nav-agent (name @drones))]
        (when (= (.getClass ex) java.net.SocketTimeoutException)
